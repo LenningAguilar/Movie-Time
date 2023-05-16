@@ -12,7 +12,7 @@ export default function getGeneros(){
         }
     });
     xhr.open('GET', 'https://streaming-availability.p.rapidapi.com/v2/genres');
-    xhr.setRequestHeader('X-RapidAPI-Key', '7aa061f6c2msh7dff68ce72ba1cep185ba7jsn716ab9bfc0eb');
+    xhr.setRequestHeader('X-RapidAPI-Key', '9d2c38cbccmsh5636b7abd570ab3p179847jsnf2891427231e');
     xhr.setRequestHeader('X-RapidAPI-Host', 'streaming-availability.p.rapidapi.com');
     xhr.send();
 }
@@ -45,7 +45,7 @@ export async function renderGenero(idGenero){
     const options = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': '7aa061f6c2msh7dff68ce72ba1cep185ba7jsn716ab9bfc0eb',
+            'X-RapidAPI-Key': '9d2c38cbccmsh5636b7abd570ab3p179847jsnf2891427231e',
             'X-RapidAPI-Host': 'streaming-availability.p.rapidapi.com'
         }
     };
