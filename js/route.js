@@ -16,7 +16,6 @@ export function initRouter(){
     //Ruta raiz top
     router.on("/", () => {
         const $main = document.querySelector(".main");
-
         $main.innerHTML = `
             <div class="main__title">
                 <h2>Top peliculas</h2>
@@ -47,13 +46,43 @@ export function initRouter(){
         `;
     });
 
-    //Ruta de genero
-    router.on('/generos/:idGenero/:categoria', () => {
-         // renderGenero(4).then( (seccion) => {
-         //     $main.appendChild(seccion);
-         //     //console.log(seccion);
-         // });
+    router.on("/index.html", () => {
+        const $main = document.querySelector(".main");
+        $main.innerHTML = `
+            <div class="main__title">
+                <h2>Top peliculas</h2>
+            </div>
 
+            <div class="grid">
+                <div class="grid__item">
+                    <a href="info-movie.html">
+                        <img id="poster" src="assets/img/Pelicula.jpg" alt="">
+                        <div class="informacion__pelicula">
+                            <div class="informacion__pelicula__titulo">
+                                <h2 id="titulo">Mario bros</h2>
+                            </div>
+                            <div class="informacion__pelicula__detalles">
+                                <p id="anio">2023</p>
+                                <p id="duracion">155 min</p>
+                            </div>
+                            <div class="informacion__pelicula__sinopsis">
+                                <p id="sinopsis">Un fontanero llamado Mario viaja por un laberinto subterráneo con su hermano, Luigi, intentando salvar a una princesa capturada.</p>
+                            </div>
+                            <div class="informacion__pelicula__actores">
+                                <p id="actores">Actores: Mario bros, Lugio Bros</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        `;
+    });
+    //Ruta de genero
+    router.on('/generos/:idGenero/:categoria', ({data}) => {
+        renderGenero(data.id)
+        .then( (seccion) => {
+              $main.appendChild(seccion);
+        });
     });
 
     router.on('/generos/1/Biography', () => {

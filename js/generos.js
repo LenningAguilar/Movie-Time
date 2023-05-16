@@ -1,3 +1,4 @@
+import { router } from "./route.js";
 import { saveMovies } from "./bd.js";
 
 export default function getGeneros(){
