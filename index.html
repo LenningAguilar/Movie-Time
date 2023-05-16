@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Movie Time</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='styles/css_index.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="//unpkg.com/navigo"></script>
+    <script defer src='js/js_index.js' type="module"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="imagen centrar">
+            <a href="/" data-navigo>
+                <img src="assets/img/YouTube-Movies.png" alt="">
+            </a>
+        </div>
+        <div class="titulo centrar espacioColumnas">
+            <a href="/">
+                <h1>Movie Time</h1>
+            </a>
+        </div>
+        <ul class="generos centrar espacioColumnas">
+            <li class="menu">
+              <a href="" class="menu-enlace">Géneros</a>
+              <ul class="menu__submenu" id="menu-generos">
+              </ul>
+            </li>
+        </ul>
+        <div class="busqueda centrar espacioColumnas">
+            <div>
+                <span class="search-icon"><i class="fa fa-search"></i></span>
+                <input type="text" placeholder="Buscar película">
+            </div>
+        </div>
+    </header>
+
+    <!-- Main -->
+    <main class="main" id="main">
+        <div class="main__title">
+            <!-- <h2>Top peliculas</h2> -->
+        </div>
+        
+        <template class="grid">
+            <div class="grid__item">
+                <a href="info-movie.html">
+                    <img id="poster" src="assets/img/Pelicula.jpg" alt="">
+                    <div class="informacion__pelicula">
+                        <div class="informacion__pelicula__titulo">
+                            <h2 id="titulo">Mario bros</h2>
+                        </div>
+                        <div class="informacion__pelicula__detalles">
+                            <p id="anio">2023</p>
+                            <p id="duracion">155 min</p>
+                        </div>
+                        <div class="informacion__pelicula__sinopsis">
+                            <p id="sinopsis">Un fontanero llamado Mario viaja por un laberinto subterráneo con su hermano, Luigi, intentando salvar a una princesa capturada.</p>
+                        </div>
+                        <div class="informacion__pelicula__actores">
+                            <p id="actores">Actores: Mario bros, Lugio Bros</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </template>
+
+        
+    </main>
+</body>
+</html>

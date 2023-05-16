@@ -1,0 +1,265 @@
+:root{
+    --primario: #e02627;
+    --blanco: white;
+    --negro: black;
+    --fuentePrincipal: 'Roboto', sans-serif;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; 
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+/** Globales **/
+body{
+    margin: 2rem;
+    background-color: var(--negro);
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+p{
+    font-size: 1.8rem;
+    font-family: var(--fuentePrincipal);
+    color: var(--blanco);
+}
+
+a{
+    text-decoration: none;
+    color: var(--blanco);
+    font-size: 2rem;
+    font-family: var(--fuentePrincipal);
+}
+
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+h1{
+    color: var(--primario);
+    font-family: var(--fuentePrincipal);
+}
+h2, h3{
+    color: var(--blanco);
+    font-family: var(--fuentePrincipal);
+}
+h1{font-size: 4rem;}
+h2{font-size: 3.2rem;}
+h3{font-size: 2.4rem;}
+
+.centrar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.espacioColumnas{
+    margin: 0rem 2rem;
+    padding: 0rem;
+}
+
+/*========================================================
+Header
+========================================================*/
+.header{
+    display: flex;
+    width: 100%;
+}
+.header .imagen a img{
+    display: block;
+    width: 7rem;
+    border-radius: 20px;
+}
+
+.header .generos .menu .menu__submenu{
+    display: none; /* Oculta la lista por defecto */
+    padding: 1rem;
+    position: absolute; /* Lo posiciona encima del enlace */
+    top: 1; /* Mueve la lista hacia abajo del enlace */
+    background-color: rgba(0, 0, 0, 0.5); ;/* Fondo semitransparente de color negro */
+    z-index: 1; /* Lo posiciona por encima de otros elementos */
+}
+
+.header .generos .menu .menu__submenu li{
+    list-style: none;
+}
+
+.header .generos .menu .menu__submenu li a {
+    color: red; /* Cambia el color del texto a rojo */
+}
+.header .generos .menu .menu__submenu li a:hover {
+    font-weight: bold;
+}
+
+
+.header .generos .menu:hover .menu__submenu {
+    display: block;
+}
+
+.header .busqueda{
+    flex-grow: 1;
+    justify-content: flex-end;
+}
+
+.header .busqueda div{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 1rem;
+}
+.search-icon{
+    color: var(--blanco);
+    margin-left: 1rem;
+    margin-right: 2rem;
+}
+
+.header .busqueda input{
+    border: none;
+    background-color: transparent;
+    flex: 1;
+    color: #fff;
+}
+.header .busqueda input:focus{
+    outline: none;
+}
+
+.header .busqueda:hover div{
+    box-shadow: 0px 0px 10px 5px rgba(255,255,255,0.5);
+}
+
+@media screen and (max-width: 500px) {
+    .header{
+        display: grid;
+        grid-template-rows: 3;
+        grid-template-rows: 3fr 2fr 2fr;
+        
+    }
+
+    .header .titulo{
+        display: none;
+    }
+    
+    .header .busqueda div{
+        width: 100%;
+    }
+
+    .header .busqueda {
+        margin-right: 0rem;
+        max-width: 100%;
+        justify-content: center;
+    }
+    .header .busqueda input{
+        width: 100%;
+    }
+}
+  
+@media screen and (min-width: 1440px) {
+    .header .generos{
+        margin-right: 40rem;
+    }
+
+    .header .busqueda{
+        margin-right: 10rem;
+    }
+}
+
+/*========================================================
+Main
+========================================================*/
+.main .grid{
+    display: grid;
+}
+
+
+.main .grid .grid__item a{
+    position: relative;
+    overflow: hidden;
+}
+
+.main .grid .grid__item a img{
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.main .grid .grid__item a img:hover{
+    transform: scale(1.20);
+}
+
+@media screen and (min-width: 390px) {
+    .main .grid{
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1rem;
+    }
+
+    .main .grid .grid__item a img:hover{
+        transform: scale(1.10);
+    }
+}
+  
+@media screen and (min-width: 768px) {
+    .main .grid{
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 2rem;
+    }
+
+    .main .grid .grid__item a img:hover{
+        transform: scale(1.15);
+    }
+}
+  
+@media screen and (min-width: 1440px) {
+    .main .grid{
+        grid-template-columns: repeat(7, 1fr);
+        grid-gap: 3rem;
+    }
+
+    .main .grid .grid__item a img:hover{
+        transform: scale(1.20);
+    }
+}
+
+/*========================================================
+Detalles de pelicula al hacer hover
+========================================================*/
+.grid .grid__item{
+
+}
+.informacion__pelicula {
+    display: none;
+    position: absolute;
+    top: -28rem;
+    left: 110%;
+    width: 40rem;
+    z-index: 1;
+    background-color: #1f1f1e;
+    padding: 1rem 2rem;
+}
+.grid__item a:hover .informacion__pelicula {
+    display: block;
+    transform: scale(1.05);
+    z-index: 2;
+}
+
+.informacion__pelicula__titulo h2{
+    color: white;
+}
+
+.informacion__pelicula__detalles{
+    display: flex;
+    grid-gap: 15rem;
+}
+.informacion__pelicula__detalles p{
+    color: #7e7f7f;
+}
+
+.informacion__pelicula__actores p{
+    color: #7e7f7f;
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Movie Time</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='styles/css_ifno-movie.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="//unpkg.com/navigo"></script>
+    <script defer src='js/js_index.js' type="module"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="imagen centrar">
+            <a href="/" data-navigo>
+                <img src="assets/img/YouTube-Movies.png" alt="">
+            </a>
+        </div>
+        <div class="titulo centrar espacioColumnas">
+            <a href="/">
+                <h1>Movie Time</h1>
+            </a>
+        </div>
+        <ul class="generos centrar espacioColumnas">
+            <li class="menu">
+              <a href="" class="menu-enlace">Géneros</a>
+              <ul class="menu__submenu" id="menu-generos">
+                <!-- <li><a href="#">Terror</a></li>
+                <li><a href="#">Ciencia Ficción</a></li>
+                <li><a href="#">Romance</a></li>
+                <li><a href="#">Anime</a></li>
+                <li><a href="#">Acción</a></li> -->
+              </ul>
+            </li>
+        </ul>
+        <div class="busqueda centrar espacioColumnas">
+            <div>
+                <span class="search-icon"><i class="fa fa-search"></i></span>
+                <input type="text" placeholder="Buscar película">
+            </div>
+        </div>
+    </header>
+
+    <!-- Main -->
+    <main class="main">
+        <div class="main__informacion">
+            <div class="informacion">
+                <div class="informacion__title">
+                    <h1>Mario Bros</h1>
+                </div>
+                <div class="informacion__imbdytrailer">
+                    <div class="imbd">
+                        <p>imbd</p>
+                        <p class="rate">73</p>
+                    </div>
+                    <div class="trailer">
+                        <a href="">
+                            <i class="fas fa-play"></i>
+                            <p>Trailer</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="informacion__anoytiempoygenero">
+                    <div class="anoytiempo">
+                        <p>2023</p>
+                        <p class="gray">98 min</p>
+                    </div>
+                    <div class="separador"></div>
+                    <div class="genero">
+                        <p>Aninmacion</p>
+                        <p>Aventura</p>
+                    </div>
+                </div>
+                <div class="informacion__sinopsis">
+                    <p>Un fontanero llamado Mario viaja por un laberinto subterráneo con su hermano, Luigi, intentando salvar a una princesa capturada.</p>
+                </div>
+            </div>
+            <div class="disponible">
+                <h3>Disponible en: </h3>
+                <div class="buttons">
+                    <div class="button__netflix">
+                        <a href="">Netflix</a>
+                    </div>
+                    <div class="button__disney">
+                        <a href="">Disney plus</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cartel">
+            <img src="assets/img/Pelicula.jpg" alt="">
+        </div>
+    </main>
+</body>
+</html>
